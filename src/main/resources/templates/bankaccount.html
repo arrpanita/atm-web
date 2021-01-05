@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Bank Account</title>
+</head>
+    <h1>Open Bank Account</h1>
+    <form action="#" th:action="@{/customer}" method="POST">
+        <div class="form-group">
+            <label for="inputId">Id</label>
+            <input type="input" class="form-control" name="id" id="inputId">
+        </div>
+
+        <div class="form-group">
+            <label for="inputCustomerId">Name</label>
+            <input type="input" class="form-control" name="customerid" id="inputCustomerId">
+        </div>
+
+        <div class="form-group">
+            <label for="inputType">Pin</label>
+            <input type="input" class="form-control" name="name" id="inputType">
+        </div>
+
+        div class="form-group">
+        <label for="inputBalance">Pin</label>
+        <input type="input" class="form-control" name="balance" id="inputBalance">
+        </div>
+
+        <div class="form-group">
+            <input type="submit" class="btn btn-primary">
+        </div>
+    </form>
+<hr>
+
+
+
+<table class="table table-bordered">
+            <thead class="thead-light">
+            <tr>
+                <th>Id</th>
+                <th>Customer Id</th>
+                <th>Type</th>
+                <th>Balance</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="customer: ${allCustomers}">
+                <td th:text="${customer.id}"></td>
+                <td th:text="${customer.cutomerId}"></td>
+                <td th:text="${customer.type}"></td>
+                <td th:text="${customer.balance}"></td>
+            </tr>
+            </tbody>
+        </table>
+        </div>
