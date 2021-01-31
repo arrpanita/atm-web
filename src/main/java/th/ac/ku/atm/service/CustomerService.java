@@ -31,12 +31,12 @@ public class CustomerService {
 
     public Customer findCustomer(int id) {
         try {
-            return repository.findById(id);
-        } catch (EmptyResultDataAccessException e) {
+            return repository.findById(id).get();
+        } catch (NoSuchElementException e) {
             return null;
         }
-
     }
+
 
     public List<Customer> getCustomers() {
         return repository.findAll() ;

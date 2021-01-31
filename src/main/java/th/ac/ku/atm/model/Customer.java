@@ -7,10 +7,10 @@ import javax.persistence.Id;
 public class Customer {
 
     @Id
-    private int id ;
+    private int id;
 
-    private String name ;
-    private String pin ;
+    private String name;
+    private String pin;
 
     public Customer() {}
 
@@ -24,26 +24,24 @@ public class Customer {
         return id;
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public String getPin() {
-        return pin;
-    }
-
-
     public void setId(int id) {
         this.id = id;
+    }
+
+    public String getName() {
+        return name;
     }
 
     public void setName(String name) {
         this.name = name;
     }
 
+    public String getPin() {
+        return pin;
+    }
+
     public void setPin(String pin) {
         this.pin = pin;
     }
-
-
 }
+
